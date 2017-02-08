@@ -1,0 +1,82 @@
+.header-item{
+background-color: $header-base-color;
+}
+.header-address{
+  background: #000;
+  color: #fff;
+  padding:2px 0;
+  height:$header-address-size;
+}
+.header-brand {
+  line-height: 10rem;
+}
+.header-nav{
+  padding:5px 0;
+  height: $header-nav-size;
+}
+.header-menu{
+  >.site-menu{
+    >li{
+      position: relative;
+      line-height: 10rem;
+      &.active{
+        &:hover{
+          color: $primary-color-dark;
+          >a{
+            color: $primary-color-dark;
+          }
+        }
+
+      }
+      &:hover,&:active,&.active{
+        color: $primary-color;
+        border-color: $primary-color;
+        >a{
+          color: $primary-color;
+        }
+        &:after {
+          max-height: 5px;
+        }
+        }
+      >a{
+        font-weight:bold;
+        color: #000;
+        font-size: 1.5rem;
+        padding:4.5rem 2rem;
+        text-decoration: none;
+        transition-duration:450ms;
+      }
+      &:after{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left:0;
+        width:100%;
+        height:.5rem;
+        max-height:0;
+        background-color: $primary-color;
+        cursor: pointer;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1.125rem;
+        transition-duration: 350ms;
+      }
+      &:not(:first-child){
+        &:before{
+          content: '';
+          height: 3rem;
+          width: 0;
+          position: relative;
+          top: 1rem;
+          display: inline-block;
+          border-left: 1px solid #ccc;
+        }
+      }
+    }
+  }
+}
+.header-social{
+  >.social-list{
+    line-height:8rem;
+  }
+}

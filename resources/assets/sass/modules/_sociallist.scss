@@ -1,0 +1,24 @@
+.social-list{
+  padding:0;
+  margin:0;
+}
+.item-social{
+  list-style:none;
+  display: inline-block;
+  color: $secundary-color-dark;
+  transition-duration: 350ms;
+  >a{
+    color: $secundary-color-dark;
+    padding:1rem;
+    display: inline-block;
+  }
+  &:hover,&:focus{
+    background-color: #fff;
+    >a{
+      color: $primary-color;
+    }
+  }
+}
+.item-social-facebook{
+  @extend .item-social;
+}
