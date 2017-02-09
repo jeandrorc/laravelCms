@@ -8,6 +8,7 @@ use App\Models\Pagina;
 use App\Models\Post;
 use App\Models\Slider;
 
+
 class HomeController extends CoreController
 {
     private $page;

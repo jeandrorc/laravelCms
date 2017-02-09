@@ -175,6 +175,7 @@ return [
         Unisharp\Ckeditor\ServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
+        PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
 
         //
 
@@ -243,6 +244,7 @@ return [
         'Avatar'    => Laravolt\Avatar\Facade::class,
         'Flash'     => Laracasts\Flash\FlashServiceProvider::class,
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
+        'Tracker' => PragmaRX\Tracker\Vendor\Laravel\Facade::class,
 
     ],
 

@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\Models\Acesso;
+
 use App\Models\Configuracao;
 use Auth;
 
@@ -22,7 +22,6 @@ class siteMidleware
                 return redirect()->route($rota);
             }
 //        }
-
         return $next($request);
     }
 }
