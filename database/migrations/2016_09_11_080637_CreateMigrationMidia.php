@@ -19,8 +19,8 @@ class CreateMigrationMidia extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->boolean('ativo');
-            $table->string('titulo');
-            $table->text('texto');
+            $table->string('titulo')->nullable();
+            $table->text('texto')->nullable();
             $table->timestamp('data')->default(null)->nullable();
             $table->string('midia');
         });

@@ -175,8 +175,6 @@ return [
         Unisharp\Ckeditor\ServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
-        PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
-
         //
 
         /*
