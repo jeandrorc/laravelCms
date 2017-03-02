@@ -16,7 +16,8 @@
         "kryptonit3/counter": "5.2.*",
         "roumen/sitemap": "^2.6",
         "intervention/image": "^2.3",
-        "unisharp/laravel-filemanager": "^1.6"
+        "unisharp/laravel-filemanager": "^1.6",
+        "alaouy/youtube": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

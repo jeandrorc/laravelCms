@@ -1,0 +1,52 @@
+.title-section {
+  font-weight: 300 !important;
+  text-align: left;
+  font-size: 100% !important;
+  padding: 8px 8px 8px 0;
+  margin-left: 0;
+  text-transform: uppercase;
+  background-color: $body-bg;
+  background: url('/images/divisor.jpg') repeat-x center center !important;
+  color: #000;
+  > span {
+    padding: 15px 15px 15px 0;
+    background-color: $body-bg;
+  }
+}
+
+.section-primary {
+  background: $primary-color;
+  text-align: center;
+  color: $primary-color-text;
+  padding: 30px 0;
+}
+.home-featured {
+  background: #eaeaea;
+  min-height: 250px;
+}
+section{
+  padding: 60px 0;
+  & ~ section{
+    margin-top: -50px;
+  }
+}
+
+.show-more {
+  margin: auto;
+  display: block;
+  background: $primary-color;
+  max-width: 180px;
+  color: $primary-color-text;
+  text-align: center;
+  white-space: inherit;
+  transition: 450ms;
+  &:hover{
+    color: $primary-color-text;
+    background-color: darken($primary-color, 15%);
+  }
+}
+
+.item-contato {
+  line-height: 2.5;
+  font-weight: bold;
+}

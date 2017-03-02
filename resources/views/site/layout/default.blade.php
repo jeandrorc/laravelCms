@@ -18,6 +18,7 @@
 </main>
 @include('site.layout.partials._footer')
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/vendor.js') }}"></script>
 @include('partials._scripts')
 @stack('scripts')
 @if ( Config::get('app.debug') )

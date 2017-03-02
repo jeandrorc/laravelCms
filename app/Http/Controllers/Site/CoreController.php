@@ -14,7 +14,6 @@ class CoreController extends Controller {
 
     protected function view($view)
     {
-        Counter::count($view);
         return "site.pages.".$view;
     }
 

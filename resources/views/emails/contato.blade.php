@@ -1,13 +1,13 @@
 <h1>Chegou uma solicitação de contato!</h1>
-<h2>{{$nome}} entrou em contato através do formulário de contato.</h2>
-<p><strong>Nome:</strong> {{ $nome }}</p>
+<h2>{{$name or 'Guest'}} entrou em contato através do formulário de contato.</h2>
+<p><strong>Nome:</strong> {{ $name or 'Guest' }}</p>
 
 @if (isset($email) && $email)
-	<p><strong>Email:</strong> {{ $email }}</p>	
+	<p><strong>Email:</strong> {{ $email or 'Guest' }}</p>
 @endif
-@if (isset($telefone) && $telefone)
-	<p><strong>Telefone:</strong> {{ $telefone }}</p>	
+@if (isset($phone) && $phone)
+	<p><strong>Telefone:</strong> {{ $phone }}</p>
 @endif
-<p><strong>Mensagem:</strong> {{ $mensagem }}</p>
+<p><strong>Mensagem:</strong> {{ $message }}</p>
 
 

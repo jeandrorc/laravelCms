@@ -22,7 +22,7 @@ class BlogController extends CoreController
     public function index()
     {
         $featured = array_first($this->posts->get());
-        $posts = $this->posts->where('destaque',false)->paginate(5);
+        $posts = $this->posts->where('destaque',false)->paginate(2);
         $categorias = $this->categorias;
 
         return view($this->view('blog.index'),compact('posts','categorias','featured'));
@@ -37,12 +37,13 @@ class BlogController extends CoreController
         return view($this->view('blog.show'),compact('post','categorias','relateds'));
     }
 
-    public function categoriaShow($categoria)
+    public function category($categoria)
     {
         $categoria = $this->categorias->where('slug',$categoria)->first();
         $categorias = $this->categorias;
-        $posts = $categoria->posts->where('ativo',true)->sortBy('destaque')->sortBy('data_publicacao');
 
-        return view($this->view('blog.categoria.show'),compact('posts','categorias','categoria'));
+        $data = $categoria->posts->where('ativo',true)->sortBy('destaque')->sortBy('data_publicacao');
+
+        return view($this->view('blog.category'),compact('data','categorias','categoria'));
     }
 }

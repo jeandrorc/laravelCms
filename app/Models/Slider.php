@@ -40,5 +40,13 @@ class Slider extends Model
         return $this->hasMany('App\Models\SliderMidia')->with('midia');
     }
 
+    public function banner()
+    {
+        $banner = $this->midias()->first();
+        if($banner)
+        {
+            return $banner->midia->url();
+        }
+    }
         
 }

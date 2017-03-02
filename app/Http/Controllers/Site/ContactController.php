@@ -5,26 +5,29 @@ namespace App\Http\Controllers\Site;
 use App\Mail\FormContact;
 use App\Models\Categoria;
 use App\Models\Empresa;
+use App\Models\Pagina;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends CoreController
 {
-
-    public function __construct()
+    protected $data;
+    public function __construct(Pagina $pagina)
     {
-
+        $this->data = $pagina->where('slug', 'like', 'contact')->first();
     }
 
     public function index()
     {
-        return view($this->view('contact.index'));
+        $data = $this->data;
+        return view($this->view('contact.index'), compact('data'));
     }
 
     public function send(Request $request)
     {
+
         $this->validate($request, [
-            'nome' => 'required',
+            'name' => 'required',
             'email' => 'required'
         ]);
 
@@ -35,6 +38,7 @@ class ContactController extends CoreController
 
     public function mail($data)
     {
+
         try{
             $receiver = Empresa::first()->email;
             $message = new FormContact($data);

@@ -69,9 +69,12 @@ class ItemPagina extends Model
         return $this->hasMany('App\Models\ItemPagina','pagina_id','pagina_id')->with('midias');
     }
 
-    public function link()
+    public function scopeCover()
     {
-        
+        $midia = $this->midias()->first();
+        if ($midia){
+            return $midia->midia->H2();
+        }
     }
         
 }

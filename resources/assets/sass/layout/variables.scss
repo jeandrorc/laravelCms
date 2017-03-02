@@ -1,21 +1,23 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #fff;
 // Colors
-$primary-color: #0076bf;
+$primary-color: #b80a15;
+$primary-color-text: #fff;
 $primary-color-dark: darken($primary-color,15%);
 $primary-color-dark-extra: darken($primary-color,25%);
 $primary-color-light: lighten($primary-color,5%);
 $primary-color-light-extra: lighten($primary-color,15%);
 
-$secundary-color: #808285;
+$secundary-color: #297ebe;
+$secundary-color-text: #000;
 $secundary-color-dark: darken($secundary-color,15%);
 $secundary-color-dark-extra: darken($secundary-color,25%);
 $secundary-color-light: lighten($secundary-color,15%);
 $secundary-color-light-extra: lighten($secundary-color,40%);
 
 // Header
-$header-base-color:$secundary-color-light-extra;
+$header-base-color:$primary-color;
 
 $header-address-size: 22px;
 $header-nav-size:111px;
@@ -49,7 +51,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               $body-bg !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -129,9 +131,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-base:        2px !default;
+$border-radius-large:       4px !default;
+$border-radius-small:       1px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
