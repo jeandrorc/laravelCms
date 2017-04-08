@@ -1,0 +1,23 @@
+.notice-item{
+  font-size: 12px;
+
+  padding: 15px;
+  transition: 450ms;
+  h3{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  a{
+    color: $gray-dark;
+    text-decoration: none;
+  }
+  &:hover{
+    font-weight: bold;
+  }
+}
+.notice-item a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px dotted #ccc;
+}

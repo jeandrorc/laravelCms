@@ -46,7 +46,16 @@ class Galeria extends Model
     }
     public function scopeLink()
     {
-        return route('site.galeria',$this->slug);
+        return route('site.galeria.show',$this->slug);
+    }
+
+    public function scopeCover()
+    {
+        $midia = $this->midias()->first();
+        if ($midia){
+            return $midia->midia->cover();
+        }
+        return null;
     }
 
         

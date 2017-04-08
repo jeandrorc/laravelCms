@@ -20,14 +20,15 @@ class HomeController extends CoreController
     public function index()
     {
         $carousel = Slider::all();
-        $marcas = $this->page->where('slug','like','marcas')->first();
-        $vantagens = $this->page->where('slug','like','vantagens')->first();
         $parceiros = $this->page->where('slug','like','parceiros')->first();
-        $clientes = $this->page->where('slug','like','clientes')->first();
-        $servicos = $this->page->where('slug','like','servicos')->first();
-        $news = $this->news();
+        $clientes = $this->page->where('slug','like','clients')->first();
+        $sobre  =   $this->page->where('slug', 'like', 'about')->first();
+        $projetos = $this->page->where('slug', 'like', 'projects')->first()->elementos()->take(3)->get();
 
-        return view($this->view('home.index'),compact('news','carousel','marcas','vantagens','parceiros','clientes','servicos'));
+        $news = $this->news();
+        $videos = $this->news()->where('video','<>','');
+
+        return view($this->view('home.index'),compact('news','videos', 'projetos', 'carousel','parceiros','clientes', 'sobre'));
     }
 
     public function show($id)
@@ -37,6 +38,6 @@ class HomeController extends CoreController
 
     public function news()
     {
-        return $news = Post::where('ativo',true)->take(4)->get();
+        return $news = Post::where('ativo',true)->take(4)->paginate();
     }
 }

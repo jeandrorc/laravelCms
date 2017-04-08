@@ -13,18 +13,18 @@ class ServiceController extends CoreController
     private $servico;
     public function __construct(Pagina $pagina)
     {
-        $this->servico = $pagina->where('slug','like','servicos')->first();
+        $this->servico = $pagina->where('slug','like','services')->first();
     }
 
     public function index()
     {
-        $servicos = $this->servico;
-        return view($this->view('services.index'),compact('servicos'));
+        $data = $this->servico;
+        return view($this->view('services.index'),compact('data'));
     }
 
     public function show($id)
     {
-       $servico = $this->servico->elementos->where('slug',$id)->first();
-       return view($this->view('services.show'),compact('servico'));
+       $data = $this->servico->elementos->where('slug',$id)->first();
+       return view($this->view('services.show'),compact('data'));
     }
 }

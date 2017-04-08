@@ -18,10 +18,10 @@ class CreateMigrationSlider extends Migration
 
             $table->increments('id');
             $table->timestamps();
-            $table->string('titulo');
+            $table->string('titulo')->nullable();
             $table->text('descricao')->nullable();
             $table->text('link')->nullable();
-            $table->longtext('pagina');
+            $table->longtext('pagina')->nullable();
         });
     }
 

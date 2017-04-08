@@ -1,31 +1,10 @@
-.banner-home{
-
-
-  background:#4c4c4c;
-  //height: calc(100vh - (#{$header-nav-size} + #{$header-address-size}));
-  .owl-dots {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .banner-item{
-    position: relative;
-    >.banner-overley{
-      position: absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
-      width:100%;
-      height:100%;
-      background: rgba(0, 0, 0, 0.67);
-      z-index: 1;
-    }
-  }
+.banner-home {
+  background: #4c4c4c;
+  height: 60vh;
 }
-.owl-carousel {
-  position: relative;
-  //height: 100%;
-
+.owl-carousel .owl-stage-outer{
+  height: 60vh;
+}
+.owl-theme .owl-nav.disabled + .owl-dots{
+  margin-top: -24px;
 }

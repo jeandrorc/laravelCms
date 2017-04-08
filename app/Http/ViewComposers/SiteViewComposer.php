@@ -2,6 +2,7 @@
 
 namespace App\Http\ViewComposers;
 
+use App\Models\Post;
 use Illuminate\View\View;
 use App\Models\Configuracao;
 use App\Models\RedeSocial;
@@ -22,6 +23,7 @@ class SiteViewComposer
         $view->with('contatos', $contatos = ($contatos = Contato::all()) ? $contatos : []);
         $view->with('redesSociais',$redeSocial = ($redeSocial = RedeSocial::all()) ? $redeSocial : []);
         $view->with('scripts', $scripts = ($scripts = Script::all()) ? $scripts : []);
-        $view->with('empresa', $empresa = ($empresa = Empresa::all())? $empresa : [] );
+        $view->with('empresa', $empresa = ($empresa = Empresa::first())? $empresa : [] );
+        $view->with('posts', Post::where('ativo',true)->take(4)->paginate());
     }
 }

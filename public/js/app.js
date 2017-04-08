@@ -68,7 +68,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-eval("\nwindow.$ = window.jQuery = __webpack_require__(2);\n\n__webpack_require__(1);\n__webpack_require__(3);//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL2Jvb3RzdHJhcC5qcz81ZTYzIl0sInNvdXJjZXNDb250ZW50IjpbIlxud2luZG93LiQgPSB3aW5kb3cualF1ZXJ5ID0gcmVxdWlyZSgnanF1ZXJ5Jyk7XG5cbnJlcXVpcmUoJ2Jvb3RzdHJhcC1zYXNzJyk7XG5yZXF1aXJlKCdvd2wuY2Fyb3VzZWwnKTtcblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gcmVzb3VyY2VzL2Fzc2V0cy9qcy9ib290c3RyYXAuanMiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=");
+eval("\nwindow.$ = window.jQuery = __webpack_require__(2);\n\n__webpack_require__(1);\n__webpack_require__(3);\n\n__webpack_require__(5)//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL2Jvb3RzdHJhcC5qcz81ZTYzIl0sInNvdXJjZXNDb250ZW50IjpbIlxud2luZG93LiQgPSB3aW5kb3cualF1ZXJ5ID0gcmVxdWlyZSgnanF1ZXJ5Jyk7XG5cbnJlcXVpcmUoJ2Jvb3RzdHJhcC1zYXNzJyk7XG5yZXF1aXJlKCdvd2wuY2Fyb3VzZWwnKTtcblxucmVxdWlyZSgnLi9tb2R1bGVzL2Jhbm5lcicpXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHJlc291cmNlcy9hc3NldHMvanMvYm9vdHN0cmFwLmpzIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 1 */
@@ -93,6 +93,12 @@ eval("/**\n * Owl Carousel v2.2.0\n * Copyright 2013-2016 David Deutsch\n * Lice
 /***/ function(module, exports, __webpack_require__) {
 
 eval("\n__webpack_require__(0);\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL2FwcC5qcz84YjY3Il0sInNvdXJjZXNDb250ZW50IjpbIlxucmVxdWlyZSgnLi9ib290c3RyYXAnKTtcblxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHJlc291cmNlcy9hc3NldHMvanMvYXBwLmpzIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7Iiwic291cmNlUm9vdCI6IiJ9");
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+eval("(function(){\n        $(\".banner-home\").owlCarousel({\n                items: 1,\n                loop: true,\n                center: true,\n                autoWidth: true\n        });\n})();//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL21vZHVsZXMvYmFubmVyLmpzPzE5ZTEiXSwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uKCl7XG4gICAgICAgICQoXCIuYmFubmVyLWhvbWVcIikub3dsQ2Fyb3VzZWwoe1xuICAgICAgICAgICAgICAgIGl0ZW1zOiAxLFxuICAgICAgICAgICAgICAgIGxvb3A6IHRydWUsXG4gICAgICAgICAgICAgICAgY2VudGVyOiB0cnVlLFxuICAgICAgICAgICAgICAgIGF1dG9XaWR0aDogdHJ1ZVxuICAgICAgICB9KTtcbn0pKCk7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHJlc291cmNlcy9hc3NldHMvanMvbW9kdWxlcy9iYW5uZXIuanMiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ }
 /******/ ]);

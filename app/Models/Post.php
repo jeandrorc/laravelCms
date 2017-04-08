@@ -79,6 +79,14 @@ class Post extends Model
         return $this->hasMany('App\Models\PostMidia')->with('midia');
     }
 
+    public function cover()
+    {
+        $midia = $this->midias()->first();
+        if ($midia){
+            return $midia->midia->cover();
+        }
+    }
+
     public function relacionados()
     {
         return $this->hasMany('App\Models\Post','post_categoria_id','post_categoria_id')->with('midias');
@@ -101,14 +109,17 @@ class Post extends Model
     public function scopeVideoUrl()
     {
        $embed = new AutoEmbed();
-        return $embed->parse($this->video);
+        return $embed->get($this->video);
     }
 
     public function scopeGetCover()
     {
-       if ($this->video)
+       if ($this->video){
            return $this->videoUrl();
-        if (isset($this->midias[0]))
-            return "<img src='".$this->midias[0]->midia->cover()."' class='coverPhoto'></img>";
+       }
+        if ($this->midias->first()){
+            return "<img src='".$this->midias->first()->midia->cover()."' class='coverPhoto'></img>";
+        }
     }
+
 }
