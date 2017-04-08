@@ -19,16 +19,10 @@ class HomeController extends CoreController
 
     public function index()
     {
-        $carousel = Slider::all();
-        $parceiros = $this->page->where('slug','like','parceiros')->first();
-        $clientes = $this->page->where('slug','like','clients')->first();
-        $sobre  =   $this->page->where('slug', 'like', 'about')->first();
-        $projetos = $this->page->where('slug', 'like', 'projects')->first()->elementos()->take(3)->get();
+        $banner = Slider::all();
 
-        $news = $this->news();
-        $videos = $this->news()->where('video','<>','');
 
-        return view($this->view('home.index'),compact('news','videos', 'projetos', 'carousel','parceiros','clientes', 'sobre'));
+        return view($this->view('home.index'),compact('banner'));
     }
 
     public function show($id)

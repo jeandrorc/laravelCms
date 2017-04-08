@@ -46,7 +46,7 @@
                             @include('site.layout.partials._menu')
                         </div>
                         <div class="copyrights">
-                            Henrique Imóvel Legal - 2017 - Todos direitos reservados
+                           {{ config('app.name') }} - 2017 - Todos direitos reservados
                         </div>
                     </div>
                     <div class="col-sm-4">
