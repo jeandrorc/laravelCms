@@ -19,8 +19,8 @@ class CreateMigrationGaleria extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('slug');
-            $table->text('descricao');
-            $table->timestamp('data');
+            $table->text('descricao')->nullable();
+            $table->timestamp('data')->nullable();
             $table->boolean('ativo')->default(true);
             $table->timestamps();
         });

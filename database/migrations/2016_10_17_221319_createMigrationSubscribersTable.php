@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMigrationContato extends Migration
+class CreateMigrationSubscribersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateMigrationContato extends Migration
      */
     public function up()
     {
-        Schema::create('contato', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-
+        Schema::create('subscribers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('email',100)->default('');
             $table->timestamps();
-            $table->enum('tipo',['EMAIL','TELEFONE','CELULAR','WHATSAPP']);
-            $table->string('valor');
-    
         });
     }
 
@@ -31,6 +27,6 @@ class CreateMigrationContato extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contato');
+        Schema::dropIfExists('subscribers');
     }
 }

@@ -20,9 +20,9 @@ class CreatePageElementMigration extends Migration
             $table->timestamps();
 
             $table->string('titulo');
-            $table->string('descricao',600);
+            $table->string('descricao',600)->nullable();
             $table->longText('texto');
-            $table->text('link');
+            $table->text('link')->nullable();
             $table->date('data_publicacao');
             $table->boolean('ativo')->default(true);
             $table->string('slug');

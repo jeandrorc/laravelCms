@@ -21,8 +21,8 @@ class CreateMigrationPagina extends Migration
 
             $table->string('titulo');
             $table->string('slug');
-            $table->text('descricao');
-            $table->longtext('texto');
+            $table->text('descricao')->nullable();
+            $table->longtext('texto')->nullable();
             $table->boolean('ativo')->default(true);
 
         });
