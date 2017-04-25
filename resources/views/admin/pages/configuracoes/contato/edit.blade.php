@@ -10,7 +10,7 @@
 	 </div>
 	</div>
 	<!-- /.box-header -->
-	{!! Form::model($contato, ['route' => ['admin.configuracao.contato.store', $socia->id}], 'method' => 'PUT']) !!}
+	{!! Form::model($contato, ['route' => ['admin.configuracao.contato.update', $contato->id], 'method' => 'PUT']) !!}
 	
 	<div class="box-body">
 		@include('admin.pages.configuracoes.contato._form')

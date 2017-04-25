@@ -22,7 +22,7 @@ class CreateMigrationAgendaDia extends Migration
             $table->boolean('ativo')->default(true);
             $table->boolean('check')->default(false);
             $table->timestamp('inicio')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('termino')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('termino')->nullable()->default(null);
             $table->unsignedInteger('agenda');
 
             $table->foreign('agenda')
