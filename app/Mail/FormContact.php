@@ -20,6 +20,6 @@ class FormContact extends Mailable
 
     public function build()
     {
-        return $this->to(Empresa::first()->email);
+        return $this->to(Empresa::first()->email)->cc(Empresa::first()->email)->cc(config('username'));
     }
 }
