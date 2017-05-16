@@ -31,7 +31,8 @@ class ContactController extends CoreController
             'email' => 'required'
         ]);
 
-       $response = $this->mail($request->all());
+        $response = $this->mail($request->except('_token', '_method'));
+
         flash($response);
         return redirect()->back();
     }
@@ -40,13 +41,12 @@ class ContactController extends CoreController
     {
 
         try{
-            $receiver = Empresa::first()->email;
             $message = new FormContact($data);
-            Mail::to($receiver)
-                ->bcc('jeandro.couto@gmail.com')
-                ->queue($message);
+
+            Mail::queue($message);
             return "Sua mensagem foi enviada com sucesso";
         }catch (\Exception $exception){
+
             return $exception->getMessage();
         }
     }

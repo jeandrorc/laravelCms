@@ -12,13 +12,14 @@ class FormContact extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct()
+
+    public function __construct(Array $data)
     {
-        //
+        $this->view('emails.contato', compact('data'));
     }
 
     public function build()
     {
-        return $this->from(Empresa::first()->email)->view('emails.contato');
+        return $this->to(Empresa::first()->email);
     }
 }
