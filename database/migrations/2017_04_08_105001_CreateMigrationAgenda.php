@@ -16,7 +16,7 @@ class CreateMigrationAgenda extends Migration
         Schema::create('agenda', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('titulo',100);
+            $table->string('titulo',100)->nullable();
             $table->string('descricao')->nullable();
             $table->boolean('publico')->default(false);
             $table->boolean('ativo')->default(true);

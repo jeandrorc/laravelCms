@@ -25,7 +25,6 @@ class ContactController extends CoreController
 
     public function send(Request $request)
     {
-
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required'
@@ -39,7 +38,6 @@ class ContactController extends CoreController
 
     public function mail($data)
     {
-
         try{
             $message = new FormContact($data);
 

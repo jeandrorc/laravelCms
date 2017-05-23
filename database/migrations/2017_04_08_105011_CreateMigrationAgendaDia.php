@@ -16,7 +16,7 @@ class CreateMigrationAgendaDia extends Migration
         Schema::create('agenda_dia', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('titulo');
+            $table->string('titulo')->nullable();
             $table->string('descricao')->nullable();
             $table->longText('texto')->nullable();
             $table->boolean('ativo')->default(true);

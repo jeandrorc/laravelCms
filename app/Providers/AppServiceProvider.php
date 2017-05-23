@@ -4,22 +4,23 @@ namespace App\Providers;
 
 use App\Models\MailConfig;
 use App\Models\SiteConfig;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Route;
-use Swift_SmtpTransport;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function boot(SiteConfig $siteConfig)
     {
+        Carbon::setLocale('pt-br');
+
         if  (Schema::hasTable('site_config')){
             $this->siteConfig(SiteConfig::select('key','value')->get()->toArray());
         }
         if  (Schema::hasTable('mail_config')){
             $this->mailConfig(MailConfig::first());
         }
-
     }
 
     private function siteConfig($config)
@@ -38,8 +39,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function register()
     {
-            if ($this->app->environment() == 'local') {
-                $this->app->register('Iber\Generator\ModelGeneratorProvider');
-            }
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Iber\Generator\ModelGeneratorProvider');
+        }
     }
 }
