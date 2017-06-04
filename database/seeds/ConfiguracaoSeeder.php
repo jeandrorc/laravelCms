@@ -26,12 +26,12 @@ class ConfiguracaoSeeder extends Seeder
         );
 
         \App\Models\MailConfig::create([
-            'username'=>'jeandro.couto@gmail.com',
-            'encryption'=>'ssl',
-            'port'=>'587',
-            'host'=>'smtp.gmail.com',
             'driver'=>'smtp',
-            'password' =>'passtest'
+            'host'=>'smtp.mailtrap.io',
+            'port'=>'2525',
+            'username'=>'4b7d95171d80c3',
+            'password' =>'2c9df20f15a8db',
+            'encryption'=>'ssl'
         ]);
     }
 }
