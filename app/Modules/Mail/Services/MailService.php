@@ -17,8 +17,11 @@ class MailService
             $transport = Swift_SmtpTransport::newInstance(config('mail.host'), config('mail.port'), config('mail.encryption'));
             $transport->setUsername(config('mail.username'));
             $transport->setPassword(config('mail.password'));
+
             $mailer = \Swift_Mailer::newInstance($transport);
+
             $mailer->getTransport()->start();
+
             return 'ok';
         } catch (Swift_TransportException $e) {
             return $e->getMessage();

@@ -6,12 +6,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="{{ $configuracao->descricao or 'Site' }}" name="description"/>
 
-@if(!emptyArray($empresa))
-<meta property="business:contact_data:street_address" content="{{ $empresa->logradouro }}"/>
-<meta property="business:contact_data:locality" content="{{ $empresa->cidade }}"/>
-<meta property="business:contact_data:postal_code" content="{{ $empresa->cep }}"/>
+@if(!emptyArray($company))
+<meta property="business:contact_data:street_address" content="{{ $company->logradouro }}"/>
+<meta property="business:contact_data:locality" content="{{ $company->cidade }}"/>
+<meta property="business:contact_data:postal_code" content="{{ $company->cep }}"/>
 <meta property="business:contact_data:country_name" content="Brasil"/>
-<meta property="business:contact_data:email" content="{{ $empresa->email }}"/>
-<meta property="business:contact_data:phone_number" content="{{ $empresa->telefone }}"/>
+<meta property="business:contact_data:email" content="{{ $company->email }}"/>
+<meta property="business:contact_data:phone_number" content="{{ $company->telefone }}"/>
 <meta property="business:contact_data:website" content="{{ config('app.url') }}"/>
 @endif

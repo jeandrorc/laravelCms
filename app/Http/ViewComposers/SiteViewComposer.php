@@ -18,12 +18,12 @@ class SiteViewComposer
 
     public function compose(View $view)
     {
-        $view->with('configuracao', $configuracaoes = ($configuracaoes = Configuracao::first()) ? $configuracaoes : []);
-        $view->with('titulo' , $titulo = ($titulo = Configuracao::first()->titulo) ? $titulo : []);
-        $view->with('contatos', $contatos = ($contatos = Contato::all()) ? $contatos : []);
-        $view->with('redesSociais',$redeSocial = ($redeSocial = RedeSocial::all()) ? $redeSocial : []);
+        $view->with('config', $configuracaoes = ($configuracaoes = Configuracao::first()) ? $configuracaoes : []);
+        $view->with('title' , $titulo = ($titulo = Configuracao::first()->titulo) ? $titulo : []);
+        $view->with('contact', $contatos = ($contatos = Contato::all()) ? $contatos : []);
+        $view->with('social_network',$redeSocial = ($redeSocial = RedeSocial::all()) ? $redeSocial : []);
         $view->with('scripts', $scripts = ($scripts = Script::all()) ? $scripts : []);
-        $view->with('empresa', $empresa = ($empresa = Empresa::first())? $empresa : [] );
-        $view->with('posts', Post::where('ativo',true)->take(4)->paginate());
+        $view->with('company', $empresa = ($empresa = Empresa::first())? $empresa : [] );
+        $view->with('posts', Post::avaible()->take(4)->paginate());
     }
 }

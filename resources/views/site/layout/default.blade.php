@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('partials._favicons')
     @include('partials._globalMeta')
-    <title>{{ $titulo or $empresa->titulo }} | {{ $page or "" }}</title>
+    <title>{{ $title or $company->titulo }} | {{ $page or "" }}</title>
     <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>

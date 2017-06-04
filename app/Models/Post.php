@@ -30,7 +30,7 @@ class Post extends Model
         'post_categoria_id'
     ];
     public $casts =['ativo'=>'boolean','destaque'=>'boolean'];
-
+    public $dates = ['data_publicacao'];
 
     protected $guarded = [];
 
@@ -69,7 +69,7 @@ class Post extends Model
         return $this->belongsTo('App\Models\PostCategoria','post_categoria_id');
     }
 
-    public function scopeAtivo()
+    public function ativo()
     {
         return $this->ativo?'<i class="fa fa-check"></i> Ativo':'<i class="fa fa-stop"></i> Inativa';
     }
@@ -77,6 +77,12 @@ class Post extends Model
     public function midias()
     {
         return $this->hasMany('App\Models\PostMidia')->with('midia');
+    }
+
+    public function scopeAvaible($query)
+    {
+        return $query->where('data_publicacao','>=',Carbon::now())
+            ->where('ativo', true);
     }
 
     public function cover()
